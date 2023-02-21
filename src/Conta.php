@@ -60,7 +60,7 @@ class Conta
         return $this->titular->getNome();
     }
 
-    public function recuperaCpfTitular(): string
+    public function recuperaCpfTitular(): CPF
     {
         return $this->titular->getCpf();
     }

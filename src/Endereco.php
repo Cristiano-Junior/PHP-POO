@@ -1,6 +1,6 @@
 <?php
 
-class Endereco 
+class Endereco
 {
     private string $cidade;
     private string $bairro;
@@ -9,50 +9,29 @@ class Endereco
 
     public function __construct(string $cidade, string $bairro, string $rua, string $numero)
     {
-        $this->$cidade = $cidade;
-        $this->$bairro = $bairro;
-        $this->$rua = $rua;
-        $this->$numero = $numero;
+        $this->cidade = $cidade;
+        $this->bairro = $bairro;
+        $this->rua = $rua;
+        $this->numero = $numero;
     }
 
-    public function getCidade() : string
+    public function getCidade(): string
     {
         return $this->cidade;
     }
 
-    public function getBairro() : string
+    public function getBairro(): string
     {
         return $this->bairro;
     }
 
-    public function getRua() : string
+    public function getRua(): string
     {
         return $this->rua;
     }
 
-    public function getNumero() : string
+    public function getNumero(): string
     {
         return $this->numero;
     }
-
-    public function setCidade(string $cidade) : void
-    {
-        $this->cidade = $cidade;
-    }
-
-    public function setBairro(string $bairro) : void
-    {
-        $this->bairro = $bairro;
-    }
-
-    public function setRua(string $rua) : void
-    {
-        $this->rua = $rua;
-    }
-
-    public function setNumero(string $numero) : void
-    {
-        $this->numero = $numero;
-    }
-
 }
