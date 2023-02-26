@@ -1,5 +1,9 @@
 <?php
 
+namespace Alura\Bank\Model;
+
+use Alura\Bank\Model\{Pessoa, CPF};
+
 class Funcionario extends Pessoa
 {
     private string $cargo;

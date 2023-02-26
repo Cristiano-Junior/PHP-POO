@@ -1,5 +1,9 @@
 <?php
 
+namespace Alura\Bank\Model\Account;
+
+use Alura\Bank\Model\CPF;
+
 class Conta
 {
     private $titular;
