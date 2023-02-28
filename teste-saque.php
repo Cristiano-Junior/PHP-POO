@@ -2,13 +2,14 @@
 
 use Alura\Bank\Model\Account\Conta;
 use Alura\Bank\Model\Account\ContaPoupanca;
+use Alura\Bank\Model\Account\ContaCorrente;
 use Alura\Bank\Model\Account\Titular;
 use Alura\Bank\Model\CPF;
 use Alura\Bank\Model\Endereco;
 
 require_once 'autoload.php';
 
-$conta = new Conta(
+$conta = new ContaCorrente(
     new Titular(
         new CPF ('480.366.488-90'), 
         'Cristiano Junior', 
