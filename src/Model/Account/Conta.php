@@ -7,14 +7,17 @@ use Alura\Bank\Model\CPF;
 class Conta
 {
     private $titular;
-    private $saldo;
+    protected $saldo;
     private static $numeroDeContas = 0;
+    /**
+     * @var int $tipo 1 -- Conta Corrente, 2 -- Conta Poupança
+     */
+    private int $tipo;
 
     public function __construct(Titular $titular)
     {
         $this->titular = $titular;
         $this->saldo = 0;
-
         self::$numeroDeContas++;
     }
 
@@ -25,12 +28,15 @@ class Conta
 
     public function sacar(float $valorASacar): void
     {
-        if ($valorASacar > $this->saldo) {
+        
+        $tarifaSaque = $valorASacar * 0.05;
+        $valorSaque = $valorASacar + $tarifaSaque;
+        if ($valorSaque > $this->saldo) {
             echo "Saldo indisponível";
             return;
         }
 
-        $this->saldo -= $valorASacar;
+        $this->saldo -= $valorSaque;
     }
 
     public function depositar(float $valorADepositar): void
