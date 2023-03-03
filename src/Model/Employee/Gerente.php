@@ -2,7 +2,9 @@
 
 namespace Alura\Bank\Model\Employee;
 
-class Gerente extends Funcionario
+use Alura\Bank\Model\Autenticavel;
+
+class Gerente extends Funcionario implements Autenticavel
 {
     public function calculaBonificacao(): float
     {
@@ -12,5 +14,10 @@ class Gerente extends Funcionario
     public function autenticar(string $senha): bool
     {
         return $senha === '1234';
+    }
+
+    public function podeAutenticar(string $senha):bool
+    {
+        return $senha === '4321';
     }
 }

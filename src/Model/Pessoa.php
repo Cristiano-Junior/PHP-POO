@@ -4,7 +4,7 @@ namespace Alura\Bank\Model;
 
 use Alura\Bank\Model\CPF;
 
-class Pessoa
+abstract class Pessoa
 {
     private CPF $cpf;
     protected string $nome;
